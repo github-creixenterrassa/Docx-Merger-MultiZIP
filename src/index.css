@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;750&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Lora", Georgia, Cambria, serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Base resets & dark mode classes */
+html, body {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  font-family: var(--font-sans);
+}
+
+/* Custom shadow effects for Bento aesthetic */
+.shadow-soft {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.shadow-paper {
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar to match dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Print CSS Styles */
+@media print {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+  
+  #main-app-content {
+    display: none !important;
+  }
+  
+  #print-merged-area {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  #print-merged-area * {
+    visibility: visible !important;
+  }
+  
+  .document-divider {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-before: always !important;
+    break-before: page !important;
+    height: 0 !important;
+  }
+}

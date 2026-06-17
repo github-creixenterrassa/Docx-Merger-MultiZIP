@@ -1,0 +1,6 @@
+{
+  "name": "Docx Merger Multi-ZIP",
+  "description": "Una aplicación web interactiva para cargar múltiples archivos ZIP, extraer sus archivos DOCX internos, ordenarlos, previsualizarlos y fusionarlos en un único documento de Word (.docx) descargable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
