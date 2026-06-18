@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
-    base: 'Docx-Merger-MultiZIP',
+    base: '/Docx-Merger-MultiZIP/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
@@ -21,3 +21,7 @@ export default defineConfig(() => {
     },
   };
 });
+
+
+
+
